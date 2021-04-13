@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <meta charset="UTF-8"/>
+    <script src="./trilliads.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./trilliads.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js" integrity="sha256-97+5pkCC4Dcd6Gw7Ptg+BfIr4erDGQ1zc2KY8vDshCU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Trilliads</title>
+</head>
+<body>
+    <div style="left: calc(50% - 150px); top: 10px; position: absolute;">
+        <img width="300px" src="./logo.png">
+    </div>
+    <div style="left: calc(50% - 137px); top: 310px; position: absolute;">
+            <h1>Turn Calculator</h1>
+    </div>
+    <div style="left: calc(50% - 48.5px); top: 810px; position: absolute;">
+            <h1>Rules</h1>
+    </div>
+    <table style="width: 100%; top: 875px; position: absolute;">
+        <tr>
+            <td style="left: 1vw; position: absolute;" rowspan="2">
+                <p>A Pool table game for 2 - 4 Players.</p>
+                <p>Balls are placed in triangle for break as shown in the illustration: </p>
+                <p>Player 1 then picks either Red or Yellow <br> 
+                    (or bigs or smalls depending on ball set) and breaks.</p>
+                <p>If Player 1 pots a ball of their chosen colour then they get another shot.<br>
+                    The colour they chose on their first shot is still the colour they must pot.<br>
+                    If they pot the opposite colour it is considered a foul.<br>
+                    If they pot the black they lose and are out (also see tiebreaker).<br>
+                    If they pot nothing it is then Player 2's turn.
+                </p>
+                <p>Player 2 then chooses a colour and play continues for each player<br>
+                    until one colour of balls has been entirely potted. Then the player<br>
+                    who potted the final ball of that colour can pot the black.<br>
+                    However all other players may not pot the black until the alternate<br>
+                    colour has been fully sunk. Once both colours are completely sunk<br>
+                    all players may pot the black.
+                </p>
+                <p>When on black no fouls are penalised. To pot the black legally and win,<br>
+                    a trickshot must be played. A trickshot is considered to be any shot that<br>
+                    results in the black going in any pocket after either the white ball or<br>
+                    black ball comes into contact with any cushion, or the black ball is potted<br>
+                    off contact with another colour ball. For added difficulty, players may<br>
+                    decide to call the pocket.
+                </p>
+                <h2 style="font-size: 1.5em;">Fouls:</h2>
+                <p>A foul is committed when a player:<br>
+                    &nbsp a. Pots a ball opposite to their chosen colour;<br>
+                    &nbsp b. Pots the black ball (this also results in elimination);<br>
+                    &nbsp c. Pots the white ball (the white is then returned to the D);<br>
+                    &nbsp d. Touches any ball with anything other than a cue;<br>
+                    &nbsp e. Touches any ball with the cue other than the white ball;<br>
+                    &nbsp f. or Knocks any ball off the table;<br>
+                    A foul is penalised by the offending player missing their next turn.
+                </p>
+                <h2 style="font-size: 1.5em;">Tiebreaker:</h2>
+                <p>A tiebreaker occurs when the black ball is sunk prematurely (e.g. a foul) or<br>
+                    the white ball is potted on the same shot as a legal black ball sink and<br>
+                    therefore leaves more than one player still playing (on some tables this<br>
+                    leaves the remaining players without access to the black ball, e.g. paid pub<br>
+                    tables). <br>
+                    To determine a single winner, the remaining players take turns (in reverse<br>
+                    play order) attempting to pot the white ball from the top of the table (from<br>
+                    the centre dot) off the back cushion, and back into either the left or right <br>
+                    top pockets.
+                </p>
+            </td>
+            <td style="right: 1vw; position: absolute;">
+                <img width="300px;" src="./blackpot.gif" style="border: 1px; border-radius: 7.5px; border-color: white;">
+            </td>
+        </tr>
+        <tr>
+            <td style="right: 350px; position: absolute;" rowspan="2">
+                    <img width="300px;" src="./break.gif" style="border: 1px; border-radius: 7.5px; border-color: white;">
+            </td>
+            <td style="right: 1vw; position: absolute; top: 600px;">
+                <img width="300px;" src="./tiebreaker.gif" style="border: 1px; border-radius: 7.5px; border-color: white;">
+            </td>
+        </tr>
+    </table>
+</body>
